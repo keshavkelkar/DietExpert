@@ -20,7 +20,14 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+                $this->load->helper('url');
 		$this->load->view('home');
                 //For Prajact
 	}
+        
+//        function __construct(){
+//            parent::__construct();
+//            $this->load->helper('url');
+//        }
+        
 }
