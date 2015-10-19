@@ -20,11 +20,15 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-                $this->load->helper('url');
-		$this->load->view('home');
-                //For Prajact
+            $this->load->helper('url');
+            $this->load->model('insert_Into');
+            $this->getTipsOfExpert();    
 	}
-        
+        // Display Expert Tips on Right Bottom
+        public function getTipsOfExpert() {
+            $data['tips']= $this->insert_Into->getExpertAddrives();
+            $this->load->view('home', $data);
+        }
 //        function __construct(){
 //            parent::__construct();
 //            $this->load->helper('url');

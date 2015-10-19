@@ -413,31 +413,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="list-group">
-                                <a href="#" class="list-group-item"   data-container="body" data-toggle="popover" data-placement="left" data-content="list all contents of the tooltip. kkkkkkkkkkkkkkkkkkkkkkkk.">
-                                    <i class="fa fa-comments-o fa-fw"></i> expert1
-                                    <span class="pull-right text-muted small"><em>4 minutes ago</em>
-                                    </span>
-                                </a>
-                                <a href="#" class="list-group-item" data-container="body" data-toggle="popover" data-placement="left" data-content="list all contents of the tooltip.">
-                                     <i class="fa fa-comment fa-fw"></i> exprt 2
-                                    <span class="pull-right text-muted small"><em>12 minutes ago</em>
-                                    </span>
-                                </a>
-                                <a href="#" class="list-group-item" data-container="body" data-toggle="popover" data-placement="left" data-content="list all contents of the tooltip.">
-                                     <i class="fa fa-comments-o fa-fw"></i> exprt 1
-                                    <span class="pull-right text-muted small"><em>27 minutes ago</em>
-                                    </span>
-                                </a>
-                                <a href="#" class="list-group-item" data-container="body" data-toggle="popover" data-placement="left" data-content="list all contents of the tooltip.">
-                                     <i class="fa fa-comment-o fa-fw"></i> expert 4
-                                    <span class="pull-right text-muted small"><em>43 minutes ago</em>
-                                    </span>
-                                </a>
-                                <a href="#" class="list-group-item" data-container="body" data-toggle="popover" data-placement="top" data-content="list all contents of the tooltip.">
-                                    <i class="fa fa-bar-chart-o fa-fw"></i> Diet Chart updated
-                                    <span class="pull-right text-muted small"><em>11:32 AM</em>
-                                    </span>
-                                </a>
+                                <?php
+                                foreach($tips as $tip){
+                                    echo "<a class='list-group-item' data-container='body' data-toggle='popover' data-placement='left' data-content='".$tip->tips."'>
+                                        <i class='fa fa-comments-o fa-fw'></i>".$tip->d_fname." ".$tip->d_lname."
+                                        <span class='pull-right text-muted small'><em>".$tip->timeoftip."</em>
+                                        </span>
+                                    </a>";
+                                }
+                                ?> 
                             </div>
                             <!-- /.list-group -->
                             <a href="#" class="btn btn-success btn-block">View older Tips</a>

@@ -33,5 +33,12 @@ class insert_Into extends CI_Model {
         $query = $this->db->query("select feedbk_details, user_id, expert_id from Feedback_table");
         return $query->result();
     }
+    
+    // Get latests 5 tips of 
+    public function getExpertAddrives(){
+        $query = $this->db->query("select d.d_fname,d.d_lname,e.tips,e.timeoftip from experttips e,doctor d where 
+            d.doctorid=e.doctorid and e.userid='UI001' order by e.dateoftip,e.timeoftip limit 5");  // For users put session userID.
+        return $query->result();
+    }
 
 }
