@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,20 +16,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <title>Dr.Diet Expert</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/bower_components/bootstrap/dist/css/bootstrap.min.css">
-
-    <!-- Timeline CSS -->
-    <link href="<?php echo base_url(); ?>css/dist/css/timeline.css" rel="stylesheet">
+   <!-- Bootstrap Core CSS -->
+    <link href="<?php echo base_url(); ?>css/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	
-	<!-- MetisMenu CSS -->
+   <!-- MetisMenu CSS -->
     <link href="<?php echo base_url(); ?>css/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
+    
     <!-- Custom CSS -->
     <link href="<?php echo base_url(); ?>css/dist/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="<?php echo base_url(); ?>css/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Timeline CSS -->
+    <link href="<?php echo base_url(); ?>css/dist/css/timeline.css" rel="stylesheet">
+
+    
+    <!-- Morris Charts CSS -->
+    <link href="<?php echo base_url(); ?>css/bower_components/morrisjs/morris.css" rel="stylesheet">
 
 </head>
 
@@ -171,22 +178,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <a href="#"><i class="fa fa-table fa-fw"></i> #</a>
                         </li>
 						<li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Clients<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Experts<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="">Student</a>
+                                    <a href="">Dieticians</a>
                                 </li>
                                 <li>
-                                    <a href="">Engineer</a>
-                                </li>
-								<li>
-                                    <a href="">Sports Man</a>
-                                </li>
-								<li>
-                                    <a href="">Mill Worker</a>
+                                    <a href="">Physician</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
+                        </li>
+						<li>
+                            <a href="http://localhost/DietExpert/index.php/DisplayFoodTable/getFoodDet"><i class="fa fa-table fa-fw"></i> Diet table</a>
+                        </li>
+						<li>
+                            <a href="teamContact.html"><i class="fa fa-group fa-fw"></i> Team </a>
                         </li>
                     </ul>
                 </div>
@@ -198,15 +205,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-6 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-cutlery fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">Add Meal</div>
+                                    <div>Update</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">Go</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
                     <div class="panel panel-green">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-user fa-5x"></i>
+                                    <i class="fa fa-user-md fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">Clients</div>
-                                    <div>Give suggestion and tips.</div>
+                                    <div class="huge">Expert Help</div>
+                                    <div>Add expert & stay updated about diet.</div>
                                 </div>
                             </div>
                         </div>
@@ -227,8 +256,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <i class="fa fa-bar-chart-o fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">Chart</div>
-                                    <div>View & update Chart!</div>
+                                    <div class="huge">My Health</div>
+                                    <div>View & compare Chart!</div>
                                 </div>
                             </div>
                         </div>
@@ -246,11 +275,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-comment fa-5x"></i>
+                                    <i class="fa fa-stack-overflow fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">Today's Tip</div>
-                                    <div>Provide tip & suggestion</div>
+                                    <div class="huge">Manage Grocery</div>
+                                    <div>Update my plan!</div>
                                 </div>
                             </div>
                         </div>
@@ -263,37 +292,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </a>
                     </div>
                 </div>
-				<div class="col-lg-6 col-md-6">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-th-list fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">Today's Schedule</div>
-                                    <div>Update</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left">Go</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                
-				
             </div>
             <!-- /.row -->
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
+                <div class="col-lg-8">
+                    <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <i class="fa fa-question fa-fw"></i> F.A.Q.
+                            <i class="fa fa-question fa-fw"></i> Frequently Asked Questions
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -326,45 +331,109 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <!-- /.panel-body -->
                     </div>
                     <!-- /.panel -->
+					
+					<div class="container-fluid">
+					  <div class="row-fluid">
+					   
+						<div class="span10">
+						  <div class="row-fluid">
+								<div id="demo" class="tab-pane fade in active">
+									<iframe style="overflow:auto" name="demo_frame" id="demo_frame" frameborder="0" width="100%" height="500" src="about:blank"></iframe>
+								</div>
+							</div><!--/row-->
+						</div><!--/span-->
+						
+						
+					  </div><!--/row-->
 
+						<!-- Le javascript
+						================================================== -->
+						<!-- Placed at the end of the document so the pages load faster -->
+						<script src="../js/jquery.js"></script>
+						<script src="../js/bootstrap.min.js"></script>
+						<script>
+							
+							$('#grid-demo-tabs a').click(function (e) {
+							e.preventDefault();
+							$(this).tab('show');
+							})
+							
+							var demo = location.href.split("#")[1];
+							if (!demo)
+							{
+								demo = './basic/pie.php';
+							}
+
+							jQuery('#demo_frame').attr('src','../demos/'+demo);
+							jQuery('#demo_frame').load(function() { iframeLoaded(this); } );
+							
+							jQuery('#code').load('index.php?file='+demo);
+							
+							jQuery('#code').css('height', jQuery(window).height() - 286);
+							
+							function iframeLoaded(iFrameID,stop) 
+							{
+								if(iFrameID) 
+								{
+									iFrameID.height = "";
+									if(iFrameID.contentDocument){
+										iFrameID.height = iFrameID.contentDocument.body.offsetHeight + 35 + "px";
+									} else {
+										iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + 45 + "px";
+									}
+									
+									// alert(parseInt(jQuery('#code').css('height')));
+									// alert(parseInt(iFrameID.height));
+									
+									if (parseInt(jQuery('#code').css('height')) <= parseInt(iFrameID.height))
+										{jQuery('#code').css('height',iFrameID.height);}
+									else
+										{jQuery('#code').css('height', jQuery(window).height() - 286);}
+								}
+								
+								if (!stop)
+									setTimeout(function(){iframeLoaded(iFrameID,1);},1000);
+							}
+							
+							var accordion_list = $(".accordion-body");
+							accordion_list.first().addClass("in");
+						</script>
+
+					</div><!--/.fluid-container-->
+
+					
 				</div>
-                <!-- /.col-lg-6 -->
+                <!-- /.col-lg-8 -->
 				<!-- Expert's Tips -->
-                <div class="col-lg-6">
-                    <div class="panel panel-default tooltip-demo">
+                <div class="col-lg-4">
+                    <div class="panel panel-success tooltip-demo">
                         <div class="panel-heading">
-                            <i class="fa fa-bell fa-fw"></i> TIPS
-							<span class="pull-right text-muted small">
-								<a href="">
-									<button type="button" class="btn btn-red btn-circle"><i class="fa fa-plus"></i></button>
-								</a>
-                            </span>
-							<div class="clearfix"></div>
+                            <i class="fa fa-bell fa-fw"></i> Expert's Tips
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="list-group">
-                                <a href="#" class="list-group-item" >
+                                <a href="#" class="list-group-item"   data-container="body" data-toggle="popover" data-placement="left" data-content="list all contents of the tooltip. kkkkkkkkkkkkkkkkkkkkkkkk.">
                                     <i class="fa fa-comments-o fa-fw"></i> expert1
                                     <span class="pull-right text-muted small"><em>4 minutes ago</em>
                                     </span>
                                 </a>
-                                <a href="#" class="list-group-item">
+                                <a href="#" class="list-group-item" data-container="body" data-toggle="popover" data-placement="left" data-content="list all contents of the tooltip.">
                                      <i class="fa fa-comment fa-fw"></i> exprt 2
                                     <span class="pull-right text-muted small"><em>12 minutes ago</em>
                                     </span>
                                 </a>
-                                <a href="#" class="list-group-item" >
+                                <a href="#" class="list-group-item" data-container="body" data-toggle="popover" data-placement="left" data-content="list all contents of the tooltip.">
                                      <i class="fa fa-comments-o fa-fw"></i> exprt 1
                                     <span class="pull-right text-muted small"><em>27 minutes ago</em>
                                     </span>
                                 </a>
-                                <a href="#" class="list-group-item" >
+                                <a href="#" class="list-group-item" data-container="body" data-toggle="popover" data-placement="left" data-content="list all contents of the tooltip.">
                                      <i class="fa fa-comment-o fa-fw"></i> expert 4
                                     <span class="pull-right text-muted small"><em>43 minutes ago</em>
                                     </span>
                                 </a>
-                                <a href="#" class="list-group-item">
+                                <a href="#" class="list-group-item" data-container="body" data-toggle="popover" data-placement="top" data-content="list all contents of the tooltip.">
                                     <i class="fa fa-bar-chart-o fa-fw"></i> Diet Chart updated
                                     <span class="pull-right text-muted small"><em>11:32 AM</em>
                                     </span>
@@ -378,46 +447,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <!-- /.panel -->
                     
                 </div>
-                <!-- /.col-lg-6 -->
-				<div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Modals
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <!-- Button trigger modal -->
-                            <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                                Launch Demo Modal
-                            </button>
-                            <!-- Modal -->
-                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                        </div>
-                                    </div>
-                                    <!-- /.modal-content -->
-                                </div>
-                                <!-- /.modal-dialog -->
-                            </div>
-                            <!-- /.modal -->
-                        </div>
-                        <!-- .panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-6 -->
-				
+                <!-- /.col-lg-4 -->
             </div>
             <!-- /.row -->
         </div>
@@ -426,17 +456,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
     <!-- /#wrapper -->
 
-    <!-- jQuery -->
-    <script src="<?php echo base_url(); ?>js/jquery.min.js"></script>
+   <!-- jQuery -->
+    <script src="<?php echo base_url(); ?>css/bower_components/jquery/dist/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url(); ?>css/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="<?php echo base_url(); ?>js/metisMenu.min.js"></script>
+    <script src="<?php echo base_url(); ?>css/bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="<?php echo base_url(); ?>js/sb-admin-2.js"></script>
+    <script src="<?php echo base_url(); ?>css/dist/js/sb-admin-2.js"></script>
 
     <!-- Page-Level Demo Scripts - Notifications - Use for reference -->
     <script>
