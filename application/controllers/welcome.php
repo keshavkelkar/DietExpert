@@ -19,10 +19,15 @@ class Welcome extends CI_Controller {
             $this->load->model('insert_Into');
         }
         
-        public function showHome(){
+        public function showProfile(){
             $this->load->helper('url');
             $data['tips']= $this->insert_Into->getExpertAddrives();                 
             $this->load->view('userProfile',$data);
+        }
+        
+        public function showHome(){
+            $this->load->helper('url');             
+            $this->load->view('homepage');
         }
         
         public function showFruits(){
