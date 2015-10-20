@@ -3,6 +3,9 @@ class Login extends CI_Controller{
     
     function __construct(){
         parent::__construct();
+//         $this->load->model("FoodTable");
+//        $this->load->helper('url');
+//        $this->load->library('session');
     }
     
     public function do_logout(){
@@ -47,5 +50,17 @@ class Login extends CI_Controller{
                     }
                 }        
     }
+    
+    public function userProfile(){
+            
+               
+                 $this->load->helper('url');
+                 $this->load->view('userProfile');
+                 
+//                 $data['tips']= $this->insert_Into->getExpertAddrives();
+//                $this->load->view('userProfile', $data);
+        }
+            
 }
+
 ?>

@@ -10,13 +10,14 @@ class Signup_c extends CI_Controller {
 		$this->load->helper('form');
 		$this->load->helper('url');
 		$this->load->model('signup_m');
+                $this->load->model('send_email_m');
 	}	
 	function index()
 	{			
 		$this->form_validation->set_rules('name', 'Name', 'required|max_length[50]');			
-		$this->form_validation->set_rules('user_id', 'Email ID', 'required|valid_email|max_length[20]');			
+		$this->form_validation->set_rules('user_id', 'Email ID', 'required|valid_email');			
 		$this->form_validation->set_rules('address', 'Address', 'required|max_length[80]');			
-		$this->form_validation->set_rules('gender', 'Gender', 'required|max_length[6]');			
+		$this->form_validation->set_rules('gender', 'Gender', 'required');			
 		$this->form_validation->set_rules('contact_no', 'Contact No', 'required|is_numeric|max_length[11]');			
 		$this->form_validation->set_rules('weight', 'Weight', 'required|is_numeric');			
 		$this->form_validation->set_rules('height', 'Height', 'required');			
@@ -51,7 +52,7 @@ class Signup_c extends CI_Controller {
                        
                         $sub='Customer Account Verification (Diet Expert)';
                         $form_data = array(
-                                            'registered_email_id' => $form_data['email'],
+                                            'registered_email_id' => $form_data['user_id'],
                                             'message' => $sms,
                                             'name' => set_value('name'),
                                             'subject'=>$sub

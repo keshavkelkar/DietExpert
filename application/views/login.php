@@ -62,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </label>
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <a href="index.html" class="btn btn-lg btn-success btn-block">Login</a>
+                                <a href="<?php echo site_url("login/userProfile"); ?>" class="btn btn-lg btn-success btn-block">Login</a>
                             </fieldset>
                              <span> Not a member ? <a href="<?php echo site_url("signup_c"); ?>">REGISTER YOURSELF</a></span>
                         </form>

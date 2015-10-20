@@ -2,12 +2,6 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -76,9 +70,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="container">
         <div class="row">
             <div  class="col s12">
-                <h2 class="center header text_h2"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-				<span class="span_h2"> Phasellus  </span>vestibulum lorem risus, nec suscipit lorem 
-				<span class="span_h2"> laoreet quis.</span> </h2>
+                <h2 class="center header text_h2"> To enjoy good health, to bring true happiness to one's family, .
+
+				<span class="span_h2"> to bring peace to all, </span> one must first discipline and control one's own mind 
+				<span class="span_h2">  If a man can control his mind he can find the way to Enlightenment, and all wisdom and virtue will naturally come to him.</span> </h2>
             </div>
 
             <div  class="col s12 m4 l4">
