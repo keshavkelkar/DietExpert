@@ -20,9 +20,11 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+            
             $this->load->helper('url');
+            $this->load->view('homePage');
             $this->load->model('insert_Into');
-            $this->getTipsOfExpert();    
+            //$this->getTipsOfExpert();    
 	}
         // Display Expert Tips on Right Bottom
         public function getTipsOfExpert() {
@@ -45,5 +47,12 @@ class Welcome extends CI_Controller {
 
             $this->load->view('fruits');
         }
+        
+        public function showLogin(){
+                        $this->load->helper('url');
+
+            $this->load->view('login');
+        }
+        
         
 }

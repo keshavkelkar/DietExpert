@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Dr.Diet Expert</title>
 
    <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url(); ?>css/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -63,6 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <!-- Change this to a button or input when using this as a form -->
                                 <a href="index.html" class="btn btn-lg btn-success btn-block">Login</a>
                             </fieldset>
+                             <span> Not a member ? <a href="<?php echo site_url("signup_c"); ?>">REGISTER YOURSELF</a></span>
                         </form>
                     </div>
                 </div>

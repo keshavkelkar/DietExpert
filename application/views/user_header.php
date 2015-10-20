@@ -19,7 +19,7 @@
 
     
     <!-- Custom CSS -->
-    <link href="<?php echo base_url(); ?>css/dist/css/sb-admin-2.css" rel="stylesheet">
+        <link href="<?php echo base_url(); ?>css/dist/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="<?php echo base_url(); ?>css/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">

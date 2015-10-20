@@ -42,6 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <tr class="odd gradeX">
                                                 <td><i class="fa fa-tasks fa-fw"></i></td>
                                                 <td><?php echo $foods->itemname;?></td>
+                                                <td class="center"><?php echo $foods->Calories;?></td>
                                                 <td class="center"><?php echo $foods->Carbs;?></td>
                                                 <td class="center"><?php echo $foods->Fat;?></td>
                                                 <td class="center"><?php echo $foods->Protein;?></td>
