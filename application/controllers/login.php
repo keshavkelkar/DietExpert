@@ -3,9 +3,7 @@ class Login extends CI_Controller{
     
     function __construct(){
         parent::__construct();
-//         $this->load->model("FoodTable");
-//        $this->load->helper('url');
-//        $this->load->library('session');
+        $this->load->model('insert_Into');
     }
     
     public function do_logout(){
@@ -17,9 +15,7 @@ class Login extends CI_Controller{
             echo $sess_id ; 
         
             if( $sess_id == "")
-            {
-               
-                 
+            { 
                  $this->load->view('login_view');
             }
     }
@@ -55,10 +51,10 @@ class Login extends CI_Controller{
             
                
                  $this->load->helper('url');
-                 $this->load->view('userProfile');
+               //  $this->load->view('userProfile');
                  
-//                 $data['tips']= $this->insert_Into->getExpertAddrives();
-//                $this->load->view('userProfile', $data);
+                 $data['tips']= $this->insert_Into->getExpertAddrives();
+                $this->load->view('userProfile', $data);
         }
             
 }
