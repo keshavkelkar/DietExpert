@@ -27,11 +27,23 @@ class Welcome extends CI_Controller {
         // Display Expert Tips on Right Bottom
         public function getTipsOfExpert() {
             $data['tips']= $this->insert_Into->getExpertAddrives();
-            $this->load->view('home', $data);
+            $this->load->view('userProfile', $data);
         }
 //        function __construct(){
 //            parent::__construct();
 //            $this->load->helper('url');
 //        }
+        
+        public function showHome(){
+                        $this->load->helper('url');
+
+            $this->load->view('userProfile');
+        }
+        
+        public function showFruits(){
+                        $this->load->helper('url');
+
+            $this->load->view('fruits');
+        }
         
 }
