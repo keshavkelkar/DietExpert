@@ -13,9 +13,8 @@ class aiModel extends CI_Model{
              }
              
              public function getCalories($value){
-                  //$this->db->insert('userIntake', $userIntakeData);
-                 echo "value in model ";
-                 echo $value;
+                 //echo "value in model ";
+                 //echo $value;
                  $this->load->database();
 
                  $query = $this->db->query("select Calories from item where itemname = '$value'");
@@ -23,7 +22,7 @@ class aiModel extends CI_Model{
                 //$usrdata=$query->result_array();
                 $row = $query->row();
                 $calories=$row->Calories;
-                echo $calories;
+                //echo $calories;
                 return $calories;
 //                $this->load->controller('aiController');
 //                $this->aiController->calculateCalories($calo);
@@ -34,45 +33,51 @@ class aiModel extends CI_Model{
              }
              
              public function getProtein($value){
-                 echo "value in model ";
-                 echo $value;
+                 //echo "value in model ";
+                 //echo $value;
                  $this->load->database();
 
                  $query = $this->db->query("select Protein from item where itemname = '$value'");
                 
                 $row = $query->row();
                 $protein=$row->Protein;
-                echo $protein;
+                //echo $protein;
                 return $protein;
                
              }
              
              public function getFat($value){
-                 echo "value in model ";
-                 echo $value;
+                 //echo "value in model ";
+                 //echo $value;
                  $this->load->database();
 
                  $query = $this->db->query("select Fat from item where itemname = '$value'");
                 
                 $row = $query->row();
                 $fat=$row->Fat;
-                echo $fat;
+                //echo $fat;
                 return $fat;
                
              }
              
              public function getCarbs($value){
-                 echo "value in model ";
-                 echo $value;
+                 //echo "value in model ";
+                 //echo $value;
                  $this->load->database();
 
                  $query = $this->db->query("select Carbs from item where itemname = '$value'");
                 
                 $row = $query->row();
                 $carbs=$row->Carbs;
-                echo $carbs;
+                //echo $carbs;
                 return $carbs;
                
              }
+             
+            public function getBalancedDiet(){
+                $this->load->database();
+                $query = $this->db->query("select * from balanced_diet");
+                return $query;
+            }
              
 }

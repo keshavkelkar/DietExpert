@@ -30,7 +30,7 @@ class aiController extends CI_Controller {
             $totalCarbs=0;
             foreach ($_POST as $key => $value){
              if($key != "submit" && $value != "done"){
-             echo $key.'='.$value.'<br />';
+             //echo $key.'='.$value.'<br />';
              $this->load->model('aiModel');
              $calories = $this->aiModel->getCalories($value);
              $protein = $this->aiModel->getProtein($value);
@@ -47,17 +47,14 @@ class aiController extends CI_Controller {
              
                 }
             }
-            echo "finalCal ",$totalCalories;
-            echo "finalProtein ",$totalProtein;
-            echo "finalFat ",$totalFat;
-            echo "finalCarbs ",$totalCarbs;
+            //echo "finalCal ",$totalCalories;
+            //echo "finalProtein ",$totalProtein;
+            //echo "finalFat ",$totalFat;
+            //echo "finalCarbs ",$totalCarbs;
             $userId="keshav.kelkar@gmail.com";
             $date="2014-10-29";
             
-//               if($_POST['l1'] == '1' &&  $_POST['d1'] == '1'){
-//                   $rice = $_POST['l1']++;
-//               }
-               
+
            $userIntakeData = array(
                'userId'=>$userId,
                'date'=>$date,
@@ -69,32 +66,54 @@ class aiController extends CI_Controller {
            //var_dump($userIntakeData);
           $this->load->model('aiModel');
          $this->aiModel->insertIntoUserIntake($userIntakeData);
+         
+//            foreach($userIntakeData as $key => $value)
+//            {
+//             echo $value;
+//             }
+         $query = $this->aiModel->getBalancedDiet();
+         $row = $query->row();
+         $balancedCalories = $row->calories;
+         $balancedProtein = $row->protein;
+         $balancedFat = $row->fat;
+         $balancedCarbs = $row->carbs;
+
+         $requiredCalories = $totalCalories - $balancedCalories;
+         $requiredProtein = $totalProtein - $balancedProtein;
+         $requiredFat = $totalFat - $balancedFat;
+         $requiredCarbs = $totalCarbs - $balancedCarbs;
+
+         echo "Calories => ",$requiredCalories,'</br>';
+         echo "Protein => ",$requiredProtein,'</br>';
+         echo "Fat => ",$requiredFat,'</br>';
+         echo "Carbohydrates => ",$requiredCarbs;
+         
           $this->load->helper('url'); 
           $this->load->view('homePage');
         }
         
          public function calculateCalories($calories,$totalCalories) {
-            echo " total Calories b4 : ",$totalCalories;
+            //echo " total Calories b4 : ",$totalCalories;
             $totalCalories = $totalCalories + $calories ;
-            echo " total Calories aftr : ",$totalCalories,'</br>';
+            //echo " total Calories aftr : ",$totalCalories,'</br>';
             return $totalCalories;
         }
         public function calculateProtein($protein,$totalProtein) {
-            echo " total Protein b4 : ",$totalProtein;
+            //echo " total Protein b4 : ",$totalProtein;
             $totalProtein = $totalProtein + $protein ;
-            echo " total Protein aftr : ",$totalProtein,'</br>';
+            //echo " total Protein aftr : ",$totalProtein,'</br>';
             return $totalProtein;
         }
         public function calculateFat($fat,$totalFat) {
-            echo " total Fat b4 : ",$totalFat;
+            //echo " total Fat b4 : ",$totalFat;
             $totalFat = $totalFat + $fat ;
-            echo " total Fat aftr : ",$totalFat,'</br>';
+            //echo " total Fat aftr : ",$totalFat,'</br>';
             return $totalFat;
         }
         public function calculateCarbs($carbs,$totalCarbs) {
-            echo " total Carbs b4 : ",$totalCarbs;
+            //echo " total Carbs b4 : ",$totalCarbs;
             $totalCarbs = $totalCarbs + $carbs ;
-            echo " total Calories aftr : ",$totalCarbs,'</br>';
+            //echo " total Calories aftr : ",$totalCarbs,'</br>';
             return $totalCarbs;
         }
     
