@@ -53,7 +53,7 @@ class Welcome extends CI_Controller {
         
         public function showIntake(){
             $this->load->helper('url');
-            $this->load->view('user_intake');
+            $this->load->view('userIntake');
         }
         
 }

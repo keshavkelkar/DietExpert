@@ -167,7 +167,7 @@
                             <a href="<?php echo site_url("welcome/showHome"); ?>"><i class="fa fa-home fa-fw"></i> Home</a>
                         </li>
                         <li>
-                            <a href="<?php echo site_url("welcome/showHome"); ?>"><i class="fa fa-user fa-fw"></i> Profile</a>
+                            <a href="<?php echo site_url("welcome/showProfile"); ?>"><i class="fa fa-user fa-fw"></i> Profile</a>
                         </li>
 						<li>
                             <a href="#"><i class="fa fa-table fa-fw"></i> #</a>

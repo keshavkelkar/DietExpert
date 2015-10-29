@@ -80,11 +80,9 @@ class Confirm_email_c extends CI_Controller {
                      }
                     else{
                         
-                            $this->db->select('password')
-                                ->from('userlogin') 
-                                ->where('user_id',$user_id )  ;
+                            $this->db->query("select user_id from userlogin where user_id = '$user_id'");
 
-                            $query = $this->db->get();
+                           // $query = $this->db->get();
                             $row=$query->row();
                             if ($query->num_rows() > 0){
                                 $this->load->view('login');
