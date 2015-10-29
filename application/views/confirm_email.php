@@ -1,9 +1,9 @@
-<?php $this->load->view('nav') ?>
+
 
 <?php // Change the css classes to suit your needs    
 
 $attributes = array('class' => '', 'id' => '');
-echo form_open('index.php/confirm_email_c', $attributes); ?>
+echo form_open('confirm_email_c', $attributes); ?>
 <p>
         <label for="password">Password <span class="required">*</span></label>
         <?php echo form_error('password'); ?>

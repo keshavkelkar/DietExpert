@@ -21,7 +21,7 @@ class Send_email_m extends CI_Model {
             // 0 = off (for production use)
             // 1 = client messages
             // 2 = client and server messages
-            $mail->SMTPDebug = 2;
+            $mail->SMTPDebug = 0;
 
             //Ask for HTML-friendly debug output
             $mail->Debugoutput = 'html';
@@ -54,19 +54,16 @@ class Send_email_m extends CI_Model {
             $mail->addAddress($form_data['registered_email_id'], 'Omk');
 
             //Set the subject line
-            $mail->Subject = 'PHPMailer GMail SMTP test';
+            $mail->Subject = 'Welcome to Dr. Diet Expert';
 
-            //Read an HTML message body from an external file, convert referenced images to embedded,
-            //convert HTML into a basic plain-text alternative body
-           // $mail->msgHTML(file_get_contents('contents.html'), dirname(__FILE__));
 
             $mail->Body=$form_data['message'];
 
             //send the message, check for errors
             if (!$mail->send()) {
-                return false;
+                $this->load->view('login');
             } else {
-                return true;
+                $this->load->view('login');
             }
 	}
 }

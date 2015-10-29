@@ -33,10 +33,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <a href="#" id="logo-container" class="brand-logo">Dr. Diet Expert</a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="home.html">Home</a></li>
-                    <li><a href="fruits.html">Register</a></li>
                     <li><a href="">Team</a></li>
                     <li><a href="#contact">Contact</a></li>
-					<li><a href="<?php echo site_url("welcome/showLogin"); ?>"><span>Login</span></a></li>
+					<li><a href="<?php echo site_url("welcome/showLogin"); ?>"><span>Login/Register</span></a></li>
                 </ul>
                 <ul id="nav-mobile" class="side-nav">
                     <li><a href="home.html">Home</a></li>

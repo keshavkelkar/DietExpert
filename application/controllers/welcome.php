@@ -37,8 +37,7 @@ class Welcome extends CI_Controller {
         }
         
         public function showLogin(){
-                        $this->load->helper('url');
-
+            $this->load->helper('url');
             $this->load->view('login');
         }
         

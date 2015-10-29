@@ -8,7 +8,8 @@ class Confirm_email_c extends CI_Controller {
 		$this->load->database();
 		$this->load->helper('form');
                 $this->load->library('form_validation');
-		$this->load->helper('url');
+                $this->load->library('session');
+                $this->load->helper('url');
 		$this->load->model('customer_signup_m');
                 $this->load->model('send_email_m');        
 	}	
@@ -16,7 +17,7 @@ class Confirm_email_c extends CI_Controller {
 	{	
             $email =$this->session->userdata('user_id');
             if($email=""){
-                    redirect('index.php/home');
+                    redirect('index.php');
             }
             else{
                 $str=$this->input->get('token');
@@ -25,21 +26,20 @@ class Confirm_email_c extends CI_Controller {
                     $val_data=explode("&&",$token_string);
 
                     $data = array(
-                            'name' => $val_data[0],
-                            'user_id' => $val_data[1],
-                            'address' => $val_data[2],
-                            'gender' => $val_data[3],
-                            'contact_no' => $val_data[4],
-                            'weight' => $val_data[5],
-                            'height' => $val_data[6],
-                            'age' => $val_data[7],
+                            'user_type'=>$val_data[0],
+                            'name' => $val_data[1],
+                            'user_id' => $val_data[2],
+                            'address' => $val_data[3],
+                            'gender' => $val_data[4],
+                            'contact_no' => $val_data[5],
+                            'weight' => $val_data[6],
+                            'height' => $val_data[7],
+                            'age' => $val_data[8],
                         );
 
                     $user_id=$data['user_id'] ;                                    
 
                     $this->load->database();
-
-                    //$query= $this->db->query('SELECT `email` FROM `userlogin` WHERE email=".$email."');                                  
 
                     $this->db->select('user_id')
                         ->from('userlogin') 
@@ -51,12 +51,12 @@ class Confirm_email_c extends CI_Controller {
                     if ($query->num_rows() > 0){
                             $this->db->select('password')
                             ->from('userlogin') 
-                            ->where('user_id '  ,$email )  ;
+                            ->where('user_id'  ,$email )  ;
 
                           $query = $this->db->get();
                           $row=$query->row();
                             if (!$row->password == ""){
-                               $this->load->view('login_view');
+                               $this->load->view('login');
                             }
                             else{
                                    $this->session->set_userdata($data);
@@ -67,12 +67,12 @@ class Confirm_email_c extends CI_Controller {
                         
                             $this->db->select('password')
                                 ->from('userlogin') 
-                                ->where('user_id '  ,$user_id )  ;
+                                ->where('user_id',$user_id )  ;
 
                             $query = $this->db->get();
                             $row=$query->row();
                             if ($query->num_rows() > 0){
-                                $this->load->view('login_view');
+                                $this->load->view('login');
                             }
                             else
                             {
@@ -107,7 +107,7 @@ class Confirm_email_c extends CI_Controller {
                     $this->db->update('userlogin',$data);   
                     $this->session->sess_destroy();
                     echo '<h2 style="color:white">Your Email has Been Verified ,Continue with Login</h2>';
-                    $this->load->view('login_view');   
+                    $this->load->view('login');   
                     }
             }        
         }
