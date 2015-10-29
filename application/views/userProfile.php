@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
 <?php include_once 'user_header.php';?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,9 +27,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="<?php echo site_url("welcome/showIntake"); ?>">
                             <div class="panel-footer">
-                                <span class="pull-left">Go</span>
+                                <span class="pull-left"><a href="<?php echo site_url("welcome/showIntake"); ?>">Go for add meal</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -70,9 +71,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="">
                             <div class="panel-footer">
-                                <span class="pull-left">Go</span>
+                                <span class="pull-left">Go to calculate calaries</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -94,7 +95,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <a href="#">
                             <div class="panel-footer">
-                                <span class="pull-left">Go</span>
+                                <span class="pull-left"><a href="<?php echo site_url("welcome/calCalori"); ?>">Go manage</a></span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -173,7 +174,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								demo = './basic/pie.php';
 							}
 
-							jQuery('#demo_frame').attr('src','../demos/'+demo);
+							jQuery('#demo_frame').attr('src','DietExpert/css/demos/'+demo);
 							jQuery('#demo_frame').load(function() { iframeLoaded(this); } );
 							
 							jQuery('#code').load('index.php?file='+demo);

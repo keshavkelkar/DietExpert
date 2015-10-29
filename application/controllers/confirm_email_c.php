@@ -36,7 +36,17 @@ class Confirm_email_c extends CI_Controller {
                             'height' => $val_data[7],
                             'age' => $val_data[8],
                         );
+                    
+                    $bal_nut= array(
+                        'user_id' => $val_data[2],
+                        'calories' => $val_data[9],
+                        'fat' => $val_data[10],
+                        'protein' => $val_data[11],
+                        'carbs' => $val_data[12],
+                            
+                    );
 
+                    
                     $user_id=$data['user_id'] ;                                    
 
                     $this->load->database();
@@ -46,8 +56,13 @@ class Confirm_email_c extends CI_Controller {
                         ->where('user_id'  ,$email )  ;
 
                     $query = $this->db->get();
+                    
+                    $this->db->select('user_id')
+                        ->from('balanced_diet') 
+                        ->where('user_id'  ,$email )  ;
 
-
+                    
+                    
                     if ($query->num_rows() > 0){
                             $this->db->select('password')
                             ->from('userlogin') 
@@ -78,6 +93,7 @@ class Confirm_email_c extends CI_Controller {
                             {
                                 
                                 $user_id=$this->customer_signup_m->SaveForm($data);
+                                $this->customer_signup_m->SaveDiet($bal_nut);
                                 $data= array('user_id'=>$user_id);
                                 $this->session->set_userdata($data);
                                 $this->load->view('confirm_email');

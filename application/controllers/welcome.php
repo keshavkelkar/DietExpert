@@ -30,9 +30,13 @@ class Welcome extends CI_Controller {
             $this->load->view('homepage');
         }
         
+        public function guestForm(){
+            $this->load->helper('url');             
+            $this->load->view('guest_V');
+        }
+        
         public function showFruits(){
-                        $this->load->helper('url');
-
+            $this->load->helper('url');
             $this->load->view('fruits');
         }
         
@@ -40,6 +44,16 @@ class Welcome extends CI_Controller {
             $this->load->helper('url');
             $this->load->view('login');
         }
+
         
+        public function calCalori(){
+            $this->load->helper('url');
+            $this->load->view('calCalori');
+        }
+        
+        public function showIntake(){
+            $this->load->helper('url');
+            $this->load->view('user_intake');
+        }
         
 }

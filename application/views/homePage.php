@@ -10,9 +10,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="theme-color" content="#2196F3">
     <title>Dr. Diet Expert</title>
 
-    <!-- CSS  -->
+	<!-- CSS  -->
     <link href="<?php echo base_url(); ?>css/min/plugin-min.css" type="text/css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>css/min/custom-min.css" type="text/css" rel="stylesheet" >
+	
+    <!-- CSS  -->
+    <link href="../min/plugin-min.css" type="text/css" rel="stylesheet">
+    <link href="../min/custom-min.css" type="text/css" rel="stylesheet" >
 </head>
 <body id="top" class="scrollspy">
 
@@ -35,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <li><a href="home.html">Home</a></li>
                     <li><a href="">Team</a></li>
                     <li><a href="#contact">Contact</a></li>
-					<li><a href="<?php echo site_url("welcome/showLogin"); ?>"><span>Login/Register</span></a></li>
+	             <li><a href="<?php echo site_url("welcome/showLogin"); ?>"><span>Login/Register</span></a></li>
                 </ul>
                 <ul id="nav-mobile" class="side-nav">
                     <li><a href="home.html">Home</a></li>
@@ -69,31 +73,70 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="container">
         <div class="row">
             <div  class="col s12">
-                <h2 class="center header text_h2"> To enjoy good health, to bring true happiness to one's family, .
-
-				<span class="span_h2"> to bring peace to all, </span> one must first discipline and control one's own mind 
-				<span class="span_h2">  If a man can control his mind he can find the way to Enlightenment, and all wisdom and virtue will naturally come to him.</span> </h2>
+                <h4 class="center header text_h4"> 
+				<p> Put your diet on autopilot
+Dr. diet expert automatically creates meal plans that meet your diet goals.
+It can be personalized for your food preferences, budget, and schedule.
+Then, once a week, we give you a grocery list with everything you need.
+Eating smart has never been this easy.</p> </h4>
             </div>
 
             <div  class="col s12 m4 l4">
                 <div class="center promo promo-example">
-                    <i class="mdi-image-flash-on"></i>
-                    <h5 class="promo-caption">Speeds up development</h5>
-                    <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+        <div class="row">
+        <div class="col s12 m7">
+          <div class="card">
+            <div class="card-image">
+              <img src="<?php echo base_url(); ?>css/img/image1.jpg">
+            </div>
+            <div class="card-content">
+              <p>This great tasting drink will keep you feeling full until lunchtime & is very healthy.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+            
                 </div>
             </div>
             <div class="col s12 m4 l4">
                 <div class="center promo promo-example">
-                    <i class="mdi-social-group"></i>
-                    <h5 class="promo-caption">User Experience Focused</h5>
-                    <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                     <div class="row">
+        <div class="col s12 m7">
+          <div class="card">
+            <div class="card-image">
+              <img src="<?php echo base_url(); ?>css/img/image2.jpg">
+            </div>
+            <div class="card-content">
+              <p>This muesli can be used as a base to add any seeds or fruits you like for a big boost of vitamins & minerals.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+      </div>
                 </div>
             </div>
             <div class="col s12 m4 l4">
                 <div class="center promo promo-example">
-                    <i class="mdi-hardware-desktop-windows"></i>
-                    <h5 class="promo-caption">Fully responsive</h5>
-                    <p class="light center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                   <div class="row">
+        <div class="col s12 m7">
+          <div class="card">
+            <div class="card-image">
+              <img src="<?php echo base_url(); ?>css/img/image3.jpg">
+            </div>
+            <div class="card-content">
+              <p>This is fancier than a tub of yogurt, but is as convenient, healthier & more filling.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+        </div>
+      </div>
                 </div>
             </div>
         </div>
@@ -123,7 +166,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="<?php echo base_url(); ?>css/img/project1.jpg">
+                        <img class="activator" src="<?php echo base_url(); ?>css/img/project2.jpg">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Fruit 2 <i class="mdi-navigation-more-vert right"></i></span>
@@ -138,7 +181,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="<?php echo base_url(); ?>css/img/project1.jpg">
+                        <img class="activator" src="<?php echo base_url(); ?>css/img/project7.jpg">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Fruit 3 <i class="mdi-navigation-more-vert right"></i></span>
@@ -163,7 +206,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!--Parallax-->
 <div class="parallax-container">
     <div class="parallax">	
-		<img src="<?php echo base_url(); ?>css/img/img/parallax1.jpg">
+		<img src="<?php echo base_url(); ?>css/img/parallax1.jpg">
 		
 	</div>
 </div>
@@ -176,7 +219,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col s12 m2">
                 <div class="card card-avatar">
                     <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="<?php echo base_url(); ?>css/img/img/avatar1.png">
+                        <img class="activator" src="<?php echo base_url(); ?>css/img/avatar6.png">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Omkar <br/>
@@ -198,7 +241,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col s12 m2">
                 <div class="card card-avatar">
                     <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="<?php echo base_url(); ?>css/img/img/avatar4.png">
+                        <img class="activator" src="<?php echo base_url(); ?>css/img/avatar1.png">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Keshav<br/>
@@ -221,11 +264,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col s12 m2">
                 <div class="card card-avatar">
                     <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="<?php echo base_url(); ?>css/img//img/avatar2.png">
+                        <img class="activator" src="<?php echo base_url(); ?>css/img/avatar5.png">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Priyanka<br/>
-                            <small><em><a class="red-text text-darken-1" href="#">developer</a></em></small></span>
+                            <small><em><a class="red-text text-darken-1" href="#">Developer</a></em></small></span>
                         <p>
                             <a class="blue-text text-lighten-2" href="">
                                 <i class="fa fa-facebook-square"></i>
@@ -243,7 +286,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col s12 m2">
                 <div class="card card-avatar">
                     <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="<?php echo base_url(); ?>css/img/img/avatar2.png">
+                        <img class="activator" src="<?php echo base_url(); ?>css/img/avatar2.png">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Tanvi<br/>
@@ -265,7 +308,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="col s12 m2">
                 <div class="card card-avatar">
                     <div class="waves-effect waves-block waves-light">
-                        <img class="activator" src="<?php echo base_url(); ?>css/img/avatar1.png">
+                        <img class="activator" src="<?php echo base_url(); ?>css/img/avatar4.png">
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4">Avesh <br/>
@@ -375,8 +418,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
     <!--  Scripts-->
+    <script src="../min/plugin-min.js"></script>
+    <script src="../min/custom-min.js"></script>
+	
+	<!--  Scripts-->
     <script src="<?php echo base_url(); ?>css/min/plugin-min.js"></script>
     <script src="<?php echo base_url(); ?>css/min/custom-min.js"></script>
+
 
     </body>
 </html>

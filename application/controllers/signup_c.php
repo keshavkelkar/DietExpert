@@ -21,7 +21,7 @@ class Signup_c extends CI_Controller {
 		$this->form_validation->set_rules('gender', 'Gender', 'required');			
 		$this->form_validation->set_rules('contact_no', 'Contact No', 'required|is_numeric|max_length[11]');			
 		$this->form_validation->set_rules('weight', 'Weight', 'required|is_numeric');			
-		$this->form_validation->set_rules('height', 'Height', 'required');			
+		$this->form_validation->set_rules('cen', 'Height', 'required');			
 		$this->form_validation->set_rules('age', 'Age', 'required|is_numeric|max_length[3]');
 			
 		$this->form_validation->set_error_delimiters('<br /><span class="error">', '</span>');
@@ -34,6 +34,7 @@ class Signup_c extends CI_Controller {
 		{
 			
                         $utype = $this->input->post('usertype');
+                        
 			$form_data = array(
                                                 'user_type'=>$utype,
 					       	'name' => set_value('name'),
@@ -43,12 +44,17 @@ class Signup_c extends CI_Controller {
 					       	'contact_no' => set_value('contact_no'),
 					       	'weight' => set_value('weight'),
 					       	'height' => set_value('height'),
-					       	'age' => set_value('age')
-						);
-                                      
+					       	'age' => set_value('age'),
+                                                );
                         
+                        $calories = $this->input->post('rc');
+                        $fat = $this->input->post('rf');
+                        $protein = $this->input->post('rp');
+                        $carbs =  $this->input->post('rh');
+                                                
+                        var_dump($calories);
                         $this->load->library('form_validation');
-                        $token_string= base64_encode($utype.'&&'.$this->input->post('name').'&&'.$this->input->post('user_id').'&&'.$this->input->post('address').'&&'.$this->input->post('gender').'&&'.$this->input->post('contact_no').'&&'.$this->input->post('weight').'&&'.$this->input->post('height').'&&'.$this->input->post('age'));   
+                        $token_string= base64_encode($utype.'&&'.$this->input->post('name').'&&'.$this->input->post('user_id').'&&'.$this->input->post('address').'&&'.$this->input->post('gender').'&&'.$this->input->post('contact_no').'&&'.$this->input->post('weight').'&&'.$this->input->post('height').'&&'.$this->input->post('age').'&&'.$calories.'&&'.$fat.'&&'.$protein.'&&'.$carbs);   
                         $sms='Please verify your account by clicking this link:'.base_url().'index.php/confirm_email_c/index?token='.$token_string;
                         
                        

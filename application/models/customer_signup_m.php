@@ -23,5 +23,17 @@ class Customer_signup_m extends CI_Model {
 		
 		return FALSE;
 	}
+        
+        function SaveDiet($form_data)
+	{
+		$this->db->insert('balanced_diet', $form_data);
+		
+		if ($this->db->affected_rows() == '1')
+		{
+			return $form_data['user_id'];
+		}
+		
+		return FALSE;
+	}
 }
 ?>
