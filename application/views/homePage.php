@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+                $this->load->library('session');
 ?>
 
 <!DOCTYPE html>
@@ -36,13 +37,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="nav-wrapper">
             <a href="#" id="logo-container" class="brand-logo">Dr. Diet Expert</a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="home.html">Home</a></li>
+                    <li><a href="<?php echo site_url("welcome/showHome"); ?>">Home</a></li>
+                    <?php if($this->session->userdata('user_id')!= NULL){  ?>
+                        <li><a href="<?php echo site_url("welcome/showProfile"); ?>">Profile</a></li>
+                    <?php } ?>      
                     <li><a href="">Team</a></li>
                     <li><a href="#contact">Contact</a></li>
-	             <li><a href="<?php echo site_url("welcome/showLogin"); ?>"><span>Login/Register</span></a></li>
+                    <?php if($this->session->userdata('user_id')!= NULL){  ?>
+                        <li><a href="<?php echo site_url("welcome/Logout"); ?>"><span>Logout</span></a></li>
+                    <?php } else  {?>    
+                        <li><a href="<?php echo site_url("welcome/showLogin"); ?>"><span>Login/Register</span></a></li>
+
+                    <?php } ?>
                 </ul>
                 <ul id="nav-mobile" class="side-nav">
-                    <li><a href="home.html">Home</a></li>
+                    <li><a href="<?php echo site_url("welcome/showHome"); ?>">Home</a></li>
                     <li><a href="fruits.html">Register</a></li>
                     <li><a href="">Team</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -222,7 +231,7 @@ Eating smart has never been this easy.</p> </h4>
                         <img class="activator" src="<?php echo base_url(); ?>css/img/avatar6.png">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Omkar <br/>
+                        <span class="card-title activator grey-text text-darken-4">Omkar Prabhu Gaonkar 1324<br/>
                             <small><em><a class="red-text text-darken-1" href="#">Developer</a></em></small></span>
                         <p>
                             <a class="blue-text text-lighten-2" href="">
@@ -244,7 +253,7 @@ Eating smart has never been this easy.</p> </h4>
                         <img class="activator" src="<?php echo base_url(); ?>css/img/avatar1.png">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Keshav<br/>
+                        <span class="card-title activator grey-text text-darken-4">Keshav  Kelkar 1310<br/>
                             <small><em><a class="red-text text-darken-1" href="#">Developer</a></em></small>
                         </span>
                         <p>
@@ -267,7 +276,7 @@ Eating smart has never been this easy.</p> </h4>
                         <img class="activator" src="<?php echo base_url(); ?>css/img/avatar5.png">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Priyanka<br/>
+                        <span class="card-title activator grey-text text-darken-4">Priyanka Bhagat 1362<br/>
                             <small><em><a class="red-text text-darken-1" href="#">Developer</a></em></small></span>
                         <p>
                             <a class="blue-text text-lighten-2" href="">
@@ -289,7 +298,7 @@ Eating smart has never been this easy.</p> </h4>
                         <img class="activator" src="<?php echo base_url(); ?>css/img/avatar2.png">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Tanvi<br/>
+                        <span class="card-title activator grey-text text-darken-4">Tanvi Redkar 1346<br/>
                             <small><em><a class="red-text text-darken-1" href="#">Developer</a></em></small></span>
                         <p>
                             <a class="blue-text text-lighten-2" href="">
@@ -311,7 +320,7 @@ Eating smart has never been this easy.</p> </h4>
                         <img class="activator" src="<?php echo base_url(); ?>css/img/avatar4.png">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Avesh <br/>
+                        <span class="card-title activator grey-text text-darken-4">Avesh Naik 1328<br/>
                             <small><em><a class="red-text text-darken-1" href="#">Developer</a></em></small></span>
                         <p>
                             <a class="blue-text text-lighten-2" href="">
@@ -333,7 +342,7 @@ Eating smart has never been this easy.</p> </h4>
                         <img class="activator" src="<?php echo base_url(); ?>css/img/avatar3.png">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Prajact<br/>
+                        <span class="card-title activator grey-text text-darken-4">Prajact  Sawant 1326<br/>
                             <small><em><a class="red-text text-darken-1" href="#">Developer</a></em></small>
                         </span>
                         <p>

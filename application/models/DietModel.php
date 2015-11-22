@@ -1,14 +1,9 @@
 <?php
 
-class aiModel extends CI_Model{
+class DietModel extends CI_Model{
     
     
-            //$this->db->insert('donor', $donordata);
-            
-           
-             
-             
-             public function insertIntoUserIntake( $userIntakeData){
+            public function insertIntoUserIntake( $userIntakeData){
                   $this->db->insert('userIntake', $userIntakeData);
              }
              
@@ -17,9 +12,9 @@ class aiModel extends CI_Model{
                  //echo $value;
                  $this->load->database();
                  
-                 echo $value;
+                
 
-                 $query = $this->db->query("select Calories from item where itemname = '$value'");
+                 $query = $this->db->query("select Calories from item2 where itemname = '$value'");
                 // echo $query;
                 //$usrdata=$query->result_array();
                 $row = $query->row();
@@ -41,7 +36,7 @@ class aiModel extends CI_Model{
                  //echo $value;
                  $this->load->database();
 
-                 $query = $this->db->query("select Protein from item where itemname = '$value'");
+                 $query = $this->db->query("select Protein from item2 where itemname = '$value'");
                 
                 $row = $query->row();
                 $protein=$row->Protein;
@@ -55,7 +50,7 @@ class aiModel extends CI_Model{
                  //echo $value;
                  $this->load->database();
 
-                 $query = $this->db->query("select Fat from item where itemname = '$value'");
+                 $query = $this->db->query("select Fat from item2 where itemname = '$value'");
                 
                 $row = $query->row();
                 $fat=$row->Fat;
@@ -69,7 +64,7 @@ class aiModel extends CI_Model{
                  //echo $value;
                  $this->load->database();
 
-                 $query = $this->db->query("select Carbs from item where itemname = '$value'");
+                 $query = $this->db->query("select Carbs from item2 where itemname = '$value'");
                 
                 $row = $query->row();
                 $carbs=$row->Carbs;

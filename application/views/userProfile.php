@@ -10,8 +10,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
     <div id="wrapper">
-
-    
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-6 col-md-6">
@@ -36,6 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </a>
                     </div>
                 </div>
+                
                 <div class="col-lg-6 col-md-6">
                     <div class="panel panel-green">
                         <div class="panel-heading">
@@ -73,7 +72,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <a href="">
                             <div class="panel-footer">
-                                <span class="pull-left">Go to calculate calaries</span>
+                                <span class="pull-left"><a href="<?php echo site_url("welcome/showIntake"); ?>">Go to calculate calaries</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>

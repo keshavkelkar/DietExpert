@@ -259,7 +259,7 @@ alert("Please fill your details properly!");
 }
 function chk(){
 var sds = document.getElementById('dum');
-if(sds == null){alert("You are using a free package.\n You are not allowed to remove the tag.\n");
+if(sds == null){
 document.getElementById("tab").style.visibility="hidden";
 }
 var sdss = document.getElementById("dumdiv");

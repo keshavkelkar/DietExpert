@@ -57,6 +57,10 @@ class Login extends CI_Controller{
                 }
 
                 else{
+                    $userid = $this->input->post('username');
+                    $this->session->set_userdata(array(
+                            'user_id' => $userid));
+
                     if($this->session->userdata('last_page') == "" ){
                         $data['tips']= $this->insert_Into->getExpertAddrives();
                         $this->load->view('userProfile', $data);

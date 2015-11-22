@@ -47,9 +47,9 @@ class Signup_c extends CI_Controller {
 					       	'age' => set_value('age'),
                                                 );
                         
-                        $calories = $this->input->post('rc');
+                        $calories = $this->input->post('rc');                        $protein = $this->input->post('rp');
+
                         $fat = $this->input->post('rf');
-                        $protein = $this->input->post('rp');
                         $carbs =  $this->input->post('rh');
                                                 
                         var_dump($calories);
