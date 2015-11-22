@@ -11,7 +11,7 @@ class getDishes extends CI_Model {
         function getBreakfast()
 	{
             $this->db->select('itemname')
-                    ->from('item2') 
+                    ->from('item') 
                     ->where('itemType ="Breakfast"');
        
                 $query = $this->db->get();
@@ -29,8 +29,8 @@ class getDishes extends CI_Model {
         function getLunch()
 	{
             $this->db->select('itemname')
-                    ->from('item2') 
-                    ->where('itemType ="Lunch"');
+                    ->from('item') 
+                    ->where('itemType ="LD"');
        
                 $query = $this->db->get();
                                 
@@ -47,8 +47,8 @@ class getDishes extends CI_Model {
         function getDinner()
 	{
             $this->db->select('itemname')
-                    ->from('item2') 
-                    ->where('itemType ="Dinner"');
+                    ->from('item') 
+                    ->where('itemType ="LD"');
        
                 $query = $this->db->get();
                                 

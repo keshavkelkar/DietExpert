@@ -11,10 +11,10 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-         foreach ($suggest_diet as $row) {
-             echo $row->bf_name;
-             echo " ";
-         }
+        
+        foreach ($bf_dishes as $item) {
+             echo $item['bf_item'];
+        }
         ?>
     </body>
 </html>

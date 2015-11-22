@@ -78,10 +78,18 @@ class aiModel extends CI_Model{
                
              }
              
-            public function getBalancedDiet(){
+            public function getBalancedDiet($userId){
                 $this->load->database();
-                $query = $this->db->query("select * from balanced_diet");
-                return $query;
+                $query = $this->db->query("select * from balanced_diet where user_id = '$userId'");
+                $row = $query->row();
+                $balanced_diet = array(
+                    'balancedCalories' => $row->calories,
+                    'balancedProtein' => $row->protein,
+                    'balancedFat' => $row->fat,
+                    'balancedCarbs' => $row->carbs,
+                );
+                
+                return $balanced_diet;
             }
              
 }

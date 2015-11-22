@@ -15,17 +15,33 @@ class suggestDiet extends CI_Controller {
 		$this->load->model('suggest_dish_model');
         }
     
-   public function index(){
+   public function index($IntakeData){
        
-       $quest_pts = 17;
-       
-       if($quest_pts > 15)
-            $data['suggest_diet'] = $this->suggest_dish_model->getOWFood(); 
-       
+       var_dump($IntakeData);
+       /*
+        $bfCalories= $this->session->userdata('bfcalories');
+        $lunchCalories= $this->session->userdata('lunchCalories');
+        $dinnerCalories= $this->session->userdata('dinnerCalories');
         
-        elseif ($quest_pts < 15) {
-            $data['suggest_diet'] = $this->suggest_dish_model->getHealthyFood();
-        } 
+        $hadbf = $this->session->userdata('hadBF') ;
+        $hadLunch = $this->session->userdata('hadLunch');
+        $hadDinner = $this->session->userdata('hadDinner');     
+        
+         $query = $this->aiModel->getBalancedDiet();
+         $row = $query->row();
+         $balancedCalories = $row->calories;
+         $balancedProtein = $row->protein;
+         $balancedFat = $row->fat;
+         $balancedCarbs = $row->carbs;
+
+         $requiredCalories = $totalCalories - $balancedCalories;
+         $requiredProtein = $totalProtein - $balancedProtein;
+         $requiredFat = $totalFat - $balancedFat;
+         $requiredCarbs = $totalCarbs - $balancedCarbs;
+        */
+        
+       
+       
        
         $this->load->view('showDietPlan', $data);        
         
