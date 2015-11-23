@@ -204,7 +204,6 @@ Eating smart has never been this easy.</p> </h4>
             </div>
             <div class="col s12 m4 l4" style="float:right">
                 <div>
-					<span> slider of 5 fruits </span>
                     <span> <a href="fruits.html"><Button>View All of them...</Button></a></span>
                 </div>
             </div>
@@ -405,12 +404,12 @@ Eating smart has never been this easy.</p> </h4>
                 <h5 class="white-text">Social</h5>
                 <ul>
                     <li>
-                        <a class="white-text" href="https://www.facebook.com/joash.c.pereira">
+                        <a class="white-text" href="https://www.facebook.com/prajact.sawant">
                             <i class="small fa fa-facebook-square white-text"></i> Facebook
                         </a>
                     </li>
                     <li>
-                        <a class="white-text" href="https://github.com/joashp">
+                        <a class="white-text" href="https://github.com/prajact">
                             <i class="small fa fa-github-square white-text"></i> Github
                         </a>
                     </li>
@@ -425,12 +424,7 @@ Eating smart has never been this easy.</p> </h4>
     </div>
 </footer>
 
-
-    <!--  Scripts-->
-    <script src="../min/plugin-min.js"></script>
-    <script src="../min/custom-min.js"></script>
-	
-	<!--  Scripts-->
+<!--  Scripts-->
     <script src="<?php echo base_url(); ?>css/min/plugin-min.js"></script>
     <script src="<?php echo base_url(); ?>css/min/custom-min.js"></script>
 

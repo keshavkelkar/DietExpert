@@ -7,17 +7,7 @@ $p = new chartphp();
 $p->data = array(array(array('Protiens', 12),array('carbohydrates', 9), array('Fats', 14), array('Collestrol', 16),array('abc', 7), array('pqr', 9)));
 $p->chart_type = "pie";
 
-/*
-*
-$p->data_sql = "select c.categoryname, sum(a.UnitPrice * a.Quantity) as Sales
-					from products b, `order details` a, categories c
-					where a.productid = b.productid and c.categoryid = b.categoryid
-					group by c.categoryid
-					order by c.categoryid";
-*
-*/
 
-// Common Options
 $p->title = "Pie Chart";
 
 $out = $p->render('c1');

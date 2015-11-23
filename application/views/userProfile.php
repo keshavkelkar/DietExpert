@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <a href="<?php echo site_url("welcome/showIntake"); ?>">
                             <div class="panel-footer">
-                                <span class="pull-left"><a href="<?php echo site_url("welcome/showIntake"); ?>">Go for add meal</span>
+                                <span class="pull-left"><a href="<?php echo site_url("welcome/showIntake"); ?>">Click Me to Add meal</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -35,30 +35,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </div>
                 
+                
                 <div class="col-lg-6 col-md-6">
                     <div class="panel panel-green">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-user-md fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">Expert Help</div>
-                                    <div>Add expert & stay updated about diet.</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left">Go</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="panel panel-yellow">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
@@ -72,29 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <a href="">
                             <div class="panel-footer">
-                                <span class="pull-left"><a href="<?php echo site_url("welcome/showIntake"); ?>">Go to calculate calaries</span>
-                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="panel panel-red">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-stack-overflow fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">Manage Grocery</div>
-                                    <div>Update my plan!</div>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#">
-                            <div class="panel-footer">
-                                <span class="pull-left"><a href="<?php echo site_url("welcome/calCalori"); ?>">Go manage</a></span>
+                                <span class="pull-left"><a href="<?php echo site_url("welcome/showIntake"); ?>">Click Me to view your Diet Status</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -105,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!-- /.row -->
             <div class="row">
                 <div class="col-lg-8">
-                    <div class="panel panel-primary">
+                    <div class="panel panel-info">
                         <div class="panel-heading">
                             <i class="fa fa-question fa-fw"></i> Frequently Asked Questions
                         </div>
@@ -135,87 +92,87 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </a>
 							</div>
                             <!-- /.list-group -->
-                            <a href="#" class="btn btn-primary btn-block">View All</a>
+                            <a href="#" class="btn btn-default btn-block">View All</a>
                         </div>
                         <!-- /.panel-body -->
                     </div>
                     <!-- /.panel -->
 					
-					<div class="container-fluid">
-					  <div class="row-fluid">
-					   
-						<div class="span10">
-						  <div class="row-fluid">
-								<div id="demo" class="tab-pane fade in active">
-									<iframe style="overflow:auto" name="demo_frame" id="demo_frame" frameborder="0" width="100%" height="500" src="about:blank"></iframe>
-								</div>
-							</div><!--/row-->
-						</div><!--/span-->
-						
-						
-					  </div><!--/row-->
+                    <div class="container-fluid">
+                      <div class="row-fluid">
 
-						<!-- Le javascript
-						================================================== -->
-						<!-- Placed at the end of the document so the pages load faster -->
-						<script src="../js/jquery.js"></script>
-						<script src="../js/bootstrap.min.js"></script>
-						<script>
-							
-							$('#grid-demo-tabs a').click(function (e) {
-							e.preventDefault();
-							$(this).tab('show');
-							})
-							
-							var demo = location.href.split("#")[1];
-							if (!demo)
-							{
-								demo = './basic/pie.php';
-							}
+                            <div class="span10">
+                              <div class="row-fluid">
+                                    <div id="demo" class="tab-pane fade in active">
+                                            <iframe style="overflow:auto" name="demo_frame" id="demo_frame" frameborder="0" width="100%" height="500" src="about:blank"></iframe>
+                                    </div>
+                                    </div><!--/row-->
+                            </div><!--/span-->
 
-							jQuery('#demo_frame').attr('src','DietExpert/css/demos/'+demo);
-							jQuery('#demo_frame').load(function() { iframeLoaded(this); } );
-							
-							jQuery('#code').load('index.php?file='+demo);
-							
-							jQuery('#code').css('height', jQuery(window).height() - 286);
-							
-							function iframeLoaded(iFrameID,stop) 
-							{
-								if(iFrameID) 
-								{
-									iFrameID.height = "";
-									if(iFrameID.contentDocument){
-										iFrameID.height = iFrameID.contentDocument.body.offsetHeight + 35 + "px";
-									} else {
-										iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + 45 + "px";
-									}
-									
-									// alert(parseInt(jQuery('#code').css('height')));
-									// alert(parseInt(iFrameID.height));
-									
-									if (parseInt(jQuery('#code').css('height')) <= parseInt(iFrameID.height))
-										{jQuery('#code').css('height',iFrameID.height);}
-									else
-										{jQuery('#code').css('height', jQuery(window).height() - 286);}
-								}
-								
-								if (!stop)
-									setTimeout(function(){iframeLoaded(iFrameID,1);},1000);
-							}
-							
-							var accordion_list = $(".accordion-body");
-							accordion_list.first().addClass("in");
-						</script>
 
-					</div><!--/.fluid-container-->
+                      </div><!--/row-->
+
+                        <!-- Le javascript
+                        ================================================== -->
+                        <!-- Placed at the end of the document so the pages load faster -->
+                        <script src="<?php echo base_url(); ?>/js/jquery.js"></script>
+                        <script src="<?php echo base_url(); ?>/js/bootstrap.min.js"></script>
+                        <script>
+
+                                $('#grid-demo-tabs a').click(function (e) {
+                                e.preventDefault();
+                                $(this).tab('show');
+                                })
+
+                                var demo = location.href.split("#")[1];
+                                if (!demo)
+                                {
+                                        demo = 'css/demos/basic/pie.php';
+                                }
+
+                                jQuery('#demo_frame').attr('src','<?php echo base_url(); ?>/'+demo);
+                                jQuery('#demo_frame').load(function() { iframeLoaded(this); } );
+
+                                jQuery('#code').load('index.php?file='+demo);
+
+                                jQuery('#code').css('height', jQuery(window).height() - 286);
+
+                                function iframeLoaded(iFrameID,stop) 
+                                {
+                                        if(iFrameID) 
+                                        {
+                                                iFrameID.height = "";
+                                                if(iFrameID.contentDocument){
+                                                        iFrameID.height = iFrameID.contentDocument.body.offsetHeight + 35 + "px";
+                                                } else {
+                                                        iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + 45 + "px";
+                                                }
+
+                                                // alert(parseInt(jQuery('#code').css('height')));
+                                                // alert(parseInt(iFrameID.height));
+
+                                                if (parseInt(jQuery('#code').css('height')) <= parseInt(iFrameID.height))
+                                                        {jQuery('#code').css('height',iFrameID.height);}
+                                                else
+                                                        {jQuery('#code').css('height', jQuery(window).height() - 286);}
+                                        }
+
+                                        if (!stop)
+                                                setTimeout(function(){iframeLoaded(iFrameID,1);},1000);
+                                }
+
+                                var accordion_list = $(".accordion-body");
+                                accordion_list.first().addClass("in");
+                        </script>
+
+                </div><!--/.fluid-container-->
 
 					
 				</div>
                 <!-- /.col-lg-8 -->
 				<!-- Expert's Tips -->
                 <div class="col-lg-4">
-                    <div class="panel panel-success tooltip-demo">
+                    <div class="panel panel-yellow tooltip-demo">
                         <div class="panel-heading">
                             <i class="fa fa-bell fa-fw"></i> Expert's Tips
                         </div>
@@ -233,7 +190,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 ?> 
                             </div>
                             <!-- /.list-group -->
-                            <a href="#" class="btn btn-success btn-block">View older Tips</a>
+                            <a href="#" class="btn btn-default btn-block">View older Tips</a>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -250,16 +207,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- /#wrapper -->
 
    <!-- jQuery -->
-    <script src="<?php echo base_url(); ?>css/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="<?php echo base_url(); ?>css/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="<?php echo base_url(); ?>css/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="<?php echo base_url(); ?>css/dist/js/sb-admin-2.js"></script>
+    <script src="../dist/js/sb-admin-2.js"></script>
 
     <!-- Page-Level Demo Scripts - Notifications - Use for reference -->
     <script>
@@ -268,10 +225,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         selector: "[data-toggle=tooltip]",
         container: "body"
     })
-	
-	// popover demo
-    $("[data-toggle=popover]")
-        .popover()
 
     </script>
 
