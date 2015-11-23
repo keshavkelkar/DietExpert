@@ -1,161 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Diet Expert - Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div id='login_form'>
+<form class="form-horizontal"   action='<?php echo base_url();?>index.php/login/process' method='post' name='process'     >
+<fieldset>
+<div class="container">
+
+  <!--col-->
+  <div class="col-lg-12 col-md-8 col-sm-6 col-xs-4">
+  <!-- panel panel-default-->
+  <div class="panel panel-default" >
+	<!-- panel-body -->
+	<div class="panel-body" align="center" >
+		<h3>Sign Up</h3>
+		<!-- Text input-->
+		<div class="control-group">
+
+
 <?php // Change the css classes to suit your needs    
 
 $attributes = array('class' => '', 'id' => '');
-echo form_open('signup_c', $attributes); 
-?>
-<html>
-	<head>
-            <!-- Bootstrap Core CSS -->
-        <link href="<?php echo base_url(); ?>css/bower_components/bootstrap/dist/css/calori.css" rel="stylesheet">
-	
-	</head>
-        
-<body>
-<p>
-        <label for="usertype">User Type <span class="required">*</span></label>
+echo form_open('signup_c', $attributes); ?>
+
+<!-- Text input-->
+		<div class="control-group">
+        <label class="control-label" for="usertype">User Type <span class="required">*</span></label>
+        <div class="controls">
         <?php echo form_error('usertype'); ?>
         
         <?php // Change the values in this array to populate your dropdown as required ?>
-        <?php $options = array(''  => 'Please Select',
-                                'Patient'    => 'Patient',
-                                'Doctor' => 'Doctor'
-                            ); ?>
+        <?php $options = array(
+            ''  => 'Please Select',
+            'Patient'    => 'Patient',
+            'Doctor' => 'Doctor'
+          ); ?>
 
         <br /><?php echo form_dropdown('usertype', $options, set_value('usertype'))?>
-</p>
-<p>
-        <label for="name">Name <span class="required">*</span></label>
+        </div>
+                </div>
+        
+<div class="control-group">
+        <label class="control-label" for="name">Name <span class="required">*</span></label>
+        <div class="controls"> 
         <?php echo form_error('name'); ?>
         <br /><input id="name" type="text" name="name" maxlength="50" value="<?php echo set_value('name'); ?>"  />
-</p>
+        </div>
+</div>
 
-<p>
-        <label for="user_id">Email ID <span class="required">*</span></label>
+<div class="control-group">
+        <label class="control-label" for="user_id">Email ID <span class="required">*</span></label>
+        <div class="controls"> 
         <?php echo form_error('user_id'); ?>
         <br /><input id="user_id" type="text" name="user_id" maxlength="40" value="<?php echo set_value('user_id'); ?>"  />
-</p>
+        </div>
+</div>
 
 
-<p>
-        <label for="address">Address <span class="required">*</span></label>
+<div class="control-group">
+        <label class="control-label" for="address">Address <span class="required">*</span></label>
         <?php echo form_error('address'); ?>
+        <div class="controls"> 
         <br /><input id="address" type="text" name="address" maxlength="80" value="<?php echo set_value('address'); ?>"  />
-</p>
+        </div>
+</div>
 
-<p>
-        <label for="gender">Gender <span class="required">*</span></label>
-        <?php echo form_error('gen'); ?>
+<div class="control-group">
+        <label class="control-label" for="gender">Gender <span class="required">*</span></label>
+        <?php echo form_error('gender'); ?>
         <br />
-            <?php // Change or Add the radio values/labels/css classes to suit your needs ?>
-            <input id="gen" name="gender" type="radio" class="" value="Male" <?php echo $this->form_validation->set_radio('gen', 'option1'); ?> />
-            <label for="gender" class="">Male</label>
+        <div class="controls"> 
+                <?php // Change or Add the radio values/labels/css classes to suit your needs ?>
+                <input id="gender" name="gender" type="radio" class="" value="Male" <?php echo $this->form_validation->set_radio('gender', 'option1'); ?> />
+        		<label for="gender" class="">Male</label>
 
-            <input id="gen" name="gender" type="radio" class="" value="Female" <?php echo $this->form_validation->set_radio('gen', 'option2'); ?> />
-            <label for="gender" class="">Female</label>
-</p>
+        		<input id="gender" name="gender" type="radio" class="" value="Female" <?php echo $this->form_validation->set_radio('gender', 'option2'); ?> />
+        		<label for="gender" class="">Female</label>
+        </div>
+</div>
 
 
-<p>
-        <label for="contact_no">Contact No <span class="required">*</span></label>
+<div class="control-group">
+        <label class="control-label" for="contact_no">Contact No <span class="required">*</span></label>
+        <div class="controls"> 
         <?php echo form_error('contact_no'); ?>
         <br /><input id="contact_no" type="text" name="contact_no" maxlength="11" value="<?php echo set_value('contact_no'); ?>"  />
-</p>
+        </div>
+</div>
 
-<p>
-        <label for="weight">Weight <span class="required">*</span></label>
+<div class="control-group">
+        <label class="control-label" for="weight">Weight <span class="required">*</span></label>
         <?php echo form_error('weight'); ?>
-        <br /><input id="weight" type="text" name="weight" onkeyup="isNumberKey(this.id)"/>
-        <select name="wtype" id="wtype">
-            <option value="kg">Kg</option><option value="pounds">Pounds</option>
-        </select>
-</p>
+        <div class="controls"> 
+        <br /><input id="weight" type="text" name="weight"  value="<?php echo set_value('weight'); ?>"  />
+        </div>
+</div>
 
-<p>
-        <label for="height">Height <span class="required">*</span></label>
-        <select style='width:50%;' name="foot" id="foot" onchange="hcon()">
-						<option value="1">1'</option><option value="2">2'</option>
-						<option value="3">3'</option><option value="4">4'</option>
-						<option value="5">5'</option><option value="6">6'</option>
-						<option value="7">7'</option>
-					</select>
-					<select style='width:40%;' name="inch" id="inch" onchange="hcon()">
-						<option value="1">1"</option><option value="2">2"</option>
-						<option value="3">3"</option><option value="4">4"</option>
-						<option value="5">5"</option><option value="6">6"</option>
-						<option value="7">7"</option><option value="8">8"</option>
-						<option value="9">9"</option><option value="10">10"</option>
-						<option value="11">11"</option>
-					</select>
+<div class="control-group">
+        <label class="control-label" for="height">Height <span class="required">*</span></label>
         <?php echo form_error('height'); ?>
-        <br /><input id="cen" type="text" name="cen" size="4" onkeyup="con(cen)" />
-</p>
+        <div class="controls"> 
+        <br /><input id="height" type="text" name="height"  value="<?php echo set_value('height'); ?>"  />
+        </div>
+</div>
 
-<p>
-        <label for="age">Age <span class="required">*</span></label>
+<div class="control-group">
+        <label class="control-label" for="age">Age <span class="required">*</span></label>
         <?php echo form_error('age'); ?>
-        <br /><input id="age" type="text" name="age" maxlength="3" onkeypress="return cknum(event,age)">
-</p>
-<p>
-    <select style='width:100px;' name="loa" id="loa">
-        <option value="1">Sedentary</option><option value="2">Light Active</option>
-        <option value="3">Moderately Active</option><option value="4">Very Active</option>
-        <option value="5">Extra Active</option>
-   </select>
-</p>
+        <div class="controls"> 
+        <br /><input id="age" type="text" name="age" maxlength="3" value="<?php echo set_value('age'); ?>"  />
+        </div>
+</div>
 
-<p>
-    <input class='blue_button' type="button" value="Calculate The Calorie" onclick="cc()">
-</p>
-    
- <p>     
-    <table align="center" border="0" class="frms noborders">
-		<caption><b>Calorie Result</b></caption>
-		<tr>
-			<td align="right" style="color: #3D366F; font-size:13px;">Calorie Needed:</td>
-			<td>
-				<input type="text" id="rc" name="rc" style="font-size:13px;" size="15">
-			</td>
-			<td><select name="caltype" id="caltype" onChange="convert()">
-				<option value="g">Grams</option>
-				<option value="kg">Kilograms</option>
-				<option value="pounds">Pounds</option>
-				</select>
-			</td>
-		</tr>
-		</table>
-		<div>You Must Intake The Following Daily</div>
-		<table class="frms noborders">
-			<tr>
-				<td style="color: #3D366F; font-size:13px;">Fat:</td>
-				<td style="color: #3D366F; font-size:13px;">
-					<input type="text" id="rf" name="rf" style="font-size:13px;" size="10" readonly>
-				</td>
-				<td>
-					<font color="#3D366F" size="2" style='float:right'>
-					<label id="l1"></label> per day</font>
-				</td>
-				</tr>
-				<tr>
-					<td style="color: #3D366F; font-size:13px;">Protein:</td>
-					<td style="color: #3D366F; font-size:13px;"><input type="text" id="rp" name="rp" style="font-size:13px;" size="10" readonly></td>
-					<td><font color="#3D366F" size="2" style='float:right'><label id="l2"></label> per day</font></td>
-				</tr>
-				<tr>
-					<td style="color: #3D366F; font-size:13px;">Carbohydrate:</td>
-					<td style="color: #3D366F; font-size:13px;">
-						<input type="text" id="rh" name="rh" style="font-size:13px;" size="10" readonly>
-					</td>
-					<td>
-						<font color="#3D366F" size="2" style='float:right'>
-						<label id="l3"></label> per day</font>
-					</td>
-				</tr>
+
+
+
+<div class="control-group">
+    <label class="control-label" for="singlebutton"></label>
+        <?php echo form_submit( 'submit', 'Submit'); ?>
+		<div class="controls">
+                     <input type='Submit' value='Submit' class="btn btn-primary" />    
 				
-			</table>
-		
-</p>
-<?php echo form_submit( 'submit', 'Submit'); ?>
-	<!-- calories JavaScript -->
-    <script src="<?php echo base_url(); ?>css/bower_components/bootstrap/dist/js/calori.js"></script>
+		</div>
+		</div>
+</div>
+  </div>
+  </div>
+</div>
+</fieldset>
+    <?php echo form_close(); ?>
+</form> 
+
+</div>    
 </body>
 </html>
+
+
+

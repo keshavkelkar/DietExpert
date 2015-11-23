@@ -2,14 +2,15 @@
     defined('BASEPATH') OR exit('No direct script access allowed');
     $time_now=mktime(date('h')+4, date('i')+30);
     $today = date('h:i a',$time_now);
+    
 ?>
 
 <?php include_once 'user_header.php';?>
 <!DOCTYPE html>
 <html lang="en">
-
 <body>
-    <?php if(($today > "00:00 pm") && ($today < "11:58 pm")){?>
+    <?php if(($today > "00:00 pm") && ($today < "12:58 pm")){?>
+
     <div id="wrapper">
         <div id="page-wrapper">
             <div class="row">
@@ -21,12 +22,14 @@
 
                 <div class="panel-body">
                 <form role="form" method="post" action="<?php echo site_url("DietController/submitUserIntakeData"); ?>"> 
+                     
+                    <!-- Breakfast -->
                     <div class="panel panel-danger">
                         <div class="panel-body">
                             <div class="form-group ">
                                 <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
-                                    <span>You had your breakfast ?</span>
-                                    <div >
+                                    <div class="form-group">You had your breakfast ?</div>
+                                    <div class="form-group">
                                         <input class="" type="radio" name="bf1" value="1"> Yes
                                         <input class="" type="radio" name="bf1" value="0"> No
                                     </div>
@@ -36,10 +39,15 @@
                         <div class="panel-body">
                             <div class="form-group ">
                                 <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
-                                    <span>What you had for the Breakfast?</span>
-                                    <div class="form-group ">
+                                    <div class="form-group">What you had for the Breakfast?</div>
+                                    <div class="form-group">
                                         <?php foreach ($breakfast as $row) {?>
-                                               <div class="col-lg-3"><input class="form-group" type="checkbox" name="bf_list[]" value="<?php echo $row ->itemname; ?>"> <?php echo $row ->itemname;?></div>
+                                                <div class="from-group col-lg-3">
+                                                    <input type="checkbox" name="bf_list[]" value="<?php echo $row ->itemname; ?>" > <?php echo $row ->itemname;?>
+                                                </div>
+                                             
+                                                
+                                                
                                         <?php } ?>       
 
                                     </div>
@@ -49,7 +57,9 @@
                         <!-- /.panel-body -->
 
                     </div>
-                                
+                    
+                    
+                    <!-- Lunch -->
                     <div class="panel panel-danger">
 
                         <div class="panel-body">
@@ -65,18 +75,27 @@
                         </div>
                         <div class="panel-body">
                             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
-                                <span>What you had for the Lunch?</span>
-                                <p class="clearfix"> </p>
-                                <div class="form-group ">
-                                    <?php foreach ($lunch as $row) {?>
-                                    <div class="col-lg-3"><input type="checkbox" name="lunch_list[]" value="<?php echo $row ->itemname; ?>"> <?php echo $row ->itemname;?> </div>
-                                        <?php } ?>
-                                </div>
+                                <div class="form-group">What you had for the Lunch?</div>   
+                                <div class="form-group">
+                                        <?php foreach ($lunch as $row) {?>
+                                                <div class="col-lg-4 form-group">
+                                                    <input type="checkbox" name="lunch_list[]" value="<?php echo $row ->itemname; ?>" > <?php echo $row ->itemname;?>
+                                                </div>
+                                             
+                                                
+                                                
+                                        <?php } ?>       
+
+                                    </div>
                             </div>
                         </div>
                         <!-- /.panel-body -->
 
                     </div>
+                    
+                    
+                    <!-- Dinner -->
+
                     <div class="panel panel-danger">
                         <div class="panel-body">
                             <div class="form-group ">
@@ -89,25 +108,33 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="panel-body">
                             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
-                                <span>What you had for the Dinner?</span>
-                                <p class="clearfix"> </p>
-                                <div class="form-group ">
-                                    <?php foreach ($dinner as $row) {?>
-                                    <div class="col-lg-3"><input class="form-group" type="checkbox" name="Dinner_list[]" value="<?php echo $row ->itemname;?>"> <?php echo $row ->itemname;?></div>
-                                    <?php } ?>      
-                                </div>
+                                <div class="form-group">What you had for the Dinner?</div>   
+                                <div class="form-group col-lg-8">
+                                        <?php foreach ($dinner as $row) {?>
+                                                <div class="col-lg-4 form-group">
+                                                    <input type="checkbox" name="Dinner_list[]" value="<?php echo $row ->itemname; ?>" > <?php echo $row ->itemname;?>
+                                                </div>
+                                             
+                                               
+                                                
+                                        <?php } ?>       
+
+                                    </div>
                             </div>
                         </div>
                         <!-- /.panel-body -->
 
                 </div>
-
+                    
+                    
 
                     <div class="form-group">
                         <input class="btn btn-default" type="submit" name="submit" Value="Done">
                         <input class="btn btn-default" type="reset" Value="Close">
+                        
                     </div>
                 </form>
             </div>
@@ -146,7 +173,6 @@
         .popover()
 
     </script>
-
     
     <?php }else { ?>
            <div id="wrapper">
@@ -164,6 +190,7 @@
            </div>
     
     <?php } ?>
+
     
     
 </body>

@@ -85,5 +85,17 @@ class Welcome extends CI_Controller {
             }
             else
                 $this->showLogin ();   
-        }        
+        }
+        
+        
+           public function showHealth(){
+            if($this->session->userdata('user_id')!= NULL){
+                $this->load-> model('getHealth');
+                $this->load->view('userHealth');
+                
+            }
+            else
+                $this->showLogin ();   
+        }
+        
 }

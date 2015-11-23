@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <a href="">
                             <div class="panel-footer">
-                                <span class="pull-left"><a href="<?php echo site_url("welcome/showIntake"); ?>">Click Me to view your Diet Status</span>
+                                <span class="pull-left"><a href="<?php echo site_url("welcome/showHealth"); ?>">Click Me to view your Diet Status</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                 <div class="clearfix"></div>
                             </div>
@@ -61,118 +61,74 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <!-- /.row -->
             <div class="row">
-                <div class="col-lg-8">
-                    <div class="panel panel-info">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="panel panel-red">
                         <div class="panel-heading">
                             <i class="fa fa-question fa-fw"></i> Frequently Asked Questions
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="list-group">
-                                <a href="#" class="list-group-item">
-                                    <i class="fa fa-pencil fa-fw"></i> Question 1
-                                    <span class="pull-right text-muted small"><em>view</em>
-                                    </span>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                     <i class="fa fa-pencil fa-fw"></i> Question 2
-                                    <span class="pull-right text-muted small"><em>view</em>
-                                    </span>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                     <i class="fa fa-pencilfa-eye fa-fw"></i> Question 3
-                                    <span class="pull-right text-muted small"><em>view</em>
-                                    </span>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                     <i class="fa fa-pencil fa-fw"></i> Question 4
-                                    <span class="pull-right text-muted small"><em>view</em>
-                                    </span>
-									
-                                </a>
-							</div>
+                                
+                                <div class="list-group-item">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="collapsed">
+                                        <i class="fa fa-pencil fa-fw"></i> Is it healthy for children to be on a vegan diet?
+                                    </a>
+                                    <div id="collapse1" class="panel-collapse collapse" style="height: auto;">
+                                        <p class=" panel-body form-group">
+                                            A well-balanced vegan diet is safe and healthy for any stage of life, including infancy, childhood, adolescence, and during pregnancy. Plant-based diets can easily provide all essential nutrients, vitamins, and minerals that growing children and mothers-to-be need. Simply have a variety of whole grains, beans, vegetables, and fruits, and be sure to include a daily source of vitamin B12, such as any common multiple vitamin. Plant-based diets have many important health advantages: Vegans enjoy a reduced risk of heart disease, diabetes, and some types of cancer. Since eating habits are established in early childhood, choosing a vegan diet can give your child the opportunity to enjoy a variety of nutritious foods—and to carry those healthy eating habits into adulthood. Learn more about vegan nutrition for children. Learn more about building strong bones in children. Read more about our book Healthy Eating for Life for Children.
+                                        </p>
+                                        
+
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="collapsed">
+                                        <i class="fa fa-pencil fa-fw"></i> What is the best way to get vitamin B12?
+                                    </a>
+                                    <div id="collapse2" class="panel-collapse collapse" style="height: auto;">
+                                        <p class=" panel-body form-group">
+                                            Individuals following a vegan diet can readily meet their vitamin B12 with a common daily multiple vitamin or fortified foods, such as vitamin B12-fortified breakfast cereals, soymilk, meat analogues, and nutritional yeast.
+                                            Learn more about vitamin B12.
+                                        </p>
+                                        
+
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="collapsed">
+                                        <i class="fa fa-pencil fa-fw"></i> How do I get enough calcium on a vegan diet? What about osteoporosis?
+                                    </a>
+                                    <div id="collapse3" class="panel-collapse collapse" style="height: auto;">
+                                        <p class=" panel-body form-group">
+                                            By eating calcium-rich vegan foods, including leafy green vegetables such as broccoli and kale, white beans, fortified soymilks and juices, and a variety of fruits and vegetables, you can obtain all the calcium your body needs. But keeping your bones strong and avoiding osteoporosis depends on more than calcium intake—you also need to keep calcium in your bones. Exercise and vitamin D help keep the calcium in your bones, while animal protein, excess salt and caffeine, and tobacco can cause calcium loss. Learn how to prevent and reverse osteoporosis. Learn more about getting calcium on a vegan diet.
+                                        </p>
+                                        
+
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="collapsed">
+                                        <i class="fa fa-pencil fa-fw"></i> How do I get protein on a vegan diet? Do I need to combine proteins?
+                                    </a>
+                                    <div id="collapse4" class="panel-collapse collapse" style="height: auto;">
+                                        <p class=" panel-body form-group">
+                                            Protein is an important nutrient required for the building, maintenance, and repair of tissues in the body. It was once thought that various plant foods had to be eaten together to get their full protein value; this practice was known as “protein combining” or “protein complementing.” We now know that intentional combining is not necessary. As long as the diet contains a variety of grains, legumes, and vegetables, protein needs are easily met. Especially protein-rich vegan foods include soy-based products like tofu, tempeh (a fermented soybean product), seitan (a meat substitute made from a wheat protein called gluten), black beans, lentils, chickpeas, grains such as quinoa and bulgur, and whole-wheat bread. Learn more about getting protein on a vegan diet.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                             <!-- /.list-group -->
-                            <a href="#" class="btn btn-default btn-block">View All</a>
+                            
                         </div>
                         <!-- /.panel-body -->
                     </div>
                     <!-- /.panel -->
-					
-                    <div class="container-fluid">
-                      <div class="row-fluid">
-
-                            <div class="span10">
-                              <div class="row-fluid">
-                                    <div id="demo" class="tab-pane fade in active">
-                                            <iframe style="overflow:auto" name="demo_frame" id="demo_frame" frameborder="0" width="100%" height="500" src="about:blank"></iframe>
-                                    </div>
-                                    </div><!--/row-->
-                            </div><!--/span-->
-
-
-                      </div><!--/row-->
-
-                        <!-- Le javascript
-                        ================================================== -->
-                        <!-- Placed at the end of the document so the pages load faster -->
-                        <script src="<?php echo base_url(); ?>/js/jquery.js"></script>
-                        <script src="<?php echo base_url(); ?>/js/bootstrap.min.js"></script>
-                        <script>
-
-                                $('#grid-demo-tabs a').click(function (e) {
-                                e.preventDefault();
-                                $(this).tab('show');
-                                })
-
-                                var demo = location.href.split("#")[1];
-                                if (!demo)
-                                {
-                                        demo = 'css/demos/basic/pie.php';
-                                }
-
-                                jQuery('#demo_frame').attr('src','<?php echo base_url(); ?>/'+demo);
-                                jQuery('#demo_frame').load(function() { iframeLoaded(this); } );
-
-                                jQuery('#code').load('index.php?file='+demo);
-
-                                jQuery('#code').css('height', jQuery(window).height() - 286);
-
-                                function iframeLoaded(iFrameID,stop) 
-                                {
-                                        if(iFrameID) 
-                                        {
-                                                iFrameID.height = "";
-                                                if(iFrameID.contentDocument){
-                                                        iFrameID.height = iFrameID.contentDocument.body.offsetHeight + 35 + "px";
-                                                } else {
-                                                        iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + 45 + "px";
-                                                }
-
-                                                // alert(parseInt(jQuery('#code').css('height')));
-                                                // alert(parseInt(iFrameID.height));
-
-                                                if (parseInt(jQuery('#code').css('height')) <= parseInt(iFrameID.height))
-                                                        {jQuery('#code').css('height',iFrameID.height);}
-                                                else
-                                                        {jQuery('#code').css('height', jQuery(window).height() - 286);}
-                                        }
-
-                                        if (!stop)
-                                                setTimeout(function(){iframeLoaded(iFrameID,1);},1000);
-                                }
-
-                                var accordion_list = $(".accordion-body");
-                                accordion_list.first().addClass("in");
-                        </script>
-
-                </div><!--/.fluid-container-->
-
-					
-				</div>
-                <!-- /.col-lg-8 -->
-				<!-- Expert's Tips -->
-                <div class="col-lg-4">
-                    <div class="panel panel-yellow tooltip-demo">
+		</div>
+                
+		<!-- Expert's Tips -->
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="panel panel-default tooltip-demo">
                         <div class="panel-heading">
                             <i class="fa fa-bell fa-fw"></i> Expert's Tips
                         </div>
