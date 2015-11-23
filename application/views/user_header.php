@@ -80,7 +80,10 @@
                             <a href="<?php echo site_url("welcome/showProfile"); ?>"><i class="fa fa-book fa-fw"></i> Profile</a>
                         </li>
                         <li>
-			<a href="<?php echo site_url("welcome/showFruits"); ?>"><i class="fa fa-table fa-fw"></i> Nutrition table</a>
+                            <a href="<?php echo site_url("welcome/showFruits"); ?>"><i class="fa fa-table fa-fw"></i> Nutrition table</a>
+                        </li>
+                        <li>
+                            <a href="<?php echo site_url("cause/allergy"); ?>"><i class="fa fa-table fa-fw"></i> Cause of Allergy</a>
                         </li>
                     </ul>
                 </div>
